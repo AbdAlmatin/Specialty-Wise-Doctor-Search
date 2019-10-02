@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PaymentMethodController">
+    <children>
+        <Pane layoutX="31.0" layoutY="26.0" prefHeight="346.0" prefWidth="537.0" style="-fx-background-color: #0963AB;" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="26.0">
+            <children>
+                <JFXTextField fx:id="BkashNumber" focusColor="#5667a1" layoutX="174.0" layoutY="59.0" prefHeight="31.0" prefWidth="221.0" promptText="(oneword)" style="-fx-background-color: #EFF7FE;" text="(if any)" unFocusColor="#221717" />
+                <Text fill="#e8e8e8" layoutX="33.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bkash Number:" />
+                <JFXButton buttonType="RAISED" layoutX="241.0" layoutY="262.0" onAction="#AddButtonPressed" style="-fx-background-color: #EFF7FE;" text="Add" />
+            <Text fill="#e8e8e8" layoutX="31.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rocket Number:" />
+            <JFXTextField fx:id="RocketNumber" focusColor="#c5c9d7" layoutX="178.0" layoutY="189.0" prefHeight="31.0" prefWidth="221.0" promptText="(oneword)" style="-fx-background-color: #EFF7FE;" text="(if any)" unFocusColor="#221717" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="159.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <JFXButton layoutX="322.0" layoutY="262.0" onAction="#SkipButtonPressed" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #EFF7FE;" text="Skip" textFill="#b59f9f" />
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Pane>
+    </children>
+</AnchorPane>

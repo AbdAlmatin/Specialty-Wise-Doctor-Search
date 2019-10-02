@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpWindowController">
+   <children>
+      <Pane layoutX="31.0" layoutY="26.0" prefHeight="346.0" prefWidth="537.0" style="-fx-background-color: #0963AB;" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <JFXTextField fx:id="UsernameId" focusColor="#c5c9d7" layoutX="124.0" layoutY="42.0" prefHeight="31.0" prefWidth="221.0" promptText="(oneword)" style="-fx-background-color: #EFF7FE;" unFocusColor="#221717" />
+            <Text fill="#e8e8e8" layoutX="31.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+            <JFXTextField fx:id="PasswordId" focusColor="#c5c9d7" layoutX="124.0" layoutY="108.0" prefHeight="31.0" prefWidth="221.0" promptText="(valid characters)" style="-fx-background-color: #EFF7FE;" unFocusColor="#251919" />
+            <Text fill="#e8e8e8" layoutX="31.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <Text fill="#e8e8e8" layoutX="29.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+            <JFXTextField fx:id="Thana" focusColor="#c5c9d7" layoutX="249.0" layoutY="158.0" prefHeight="31.0" prefWidth="96.0" promptText="Thana" style="-fx-background-color: #EFF7FE;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="DistrictId" focusColor="#c5c9d7" layoutX="124.0" layoutY="158.0" prefHeight="31.0" prefWidth="96.0" promptText="District" style="-fx-background-color: #EFF7FE;" unFocusColor="#0a0707" />
+            <Text fill="#e8e8e8" layoutX="31.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+            <JFXTextField fx:id="EmailId" focusColor="#c5c9d7" layoutX="124.0" layoutY="211.0" prefHeight="31.0" prefWidth="221.0" promptText="(e.g: abdullah@gmail.com)" style="-fx-background-color: #EFF7FE;" unFocusColor="BLACK" />
+            <JFXButton buttonType="RAISED" layoutX="188.0" layoutY="262.0" onAction="#SingupButtonPressed" style="-fx-background-color: #F8F4FC;" text="Sign up" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
