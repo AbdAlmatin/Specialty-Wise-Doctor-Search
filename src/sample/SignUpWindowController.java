@@ -5,6 +5,7 @@
  */
 package sample;
 
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import java.io.*;
@@ -15,6 +16,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -28,7 +31,7 @@ public class SignUpWindowController {
     private JFXTextField UsernameId;
 
     @FXML
-    private JFXTextField PasswordId;
+    private JFXPasswordField PasswordId;
 
     @FXML
     private JFXTextField Thana;
@@ -38,6 +41,10 @@ public class SignUpWindowController {
 
     @FXML
     private JFXTextField EmailId;
+
+
+    @FXML
+    private Button myButton;
 
     @FXML
     void SingupButtonPressed(ActionEvent event) throws IOException, ParseException {
@@ -78,6 +85,23 @@ public class SignUpWindowController {
 
 
     }
+
+
+    @FXML
+    void BackButtonPressed(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("LogInWindow.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Log in");
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
     
     
 
