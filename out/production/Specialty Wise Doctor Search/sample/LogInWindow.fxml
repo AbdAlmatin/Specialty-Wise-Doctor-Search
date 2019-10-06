@@ -28,8 +28,7 @@
       </ImageView>
       <JFXTextField fx:id="UsernameId" layoutX="157.0" layoutY="189.0" promptText="Username" />
       <JFXButton buttonType="RAISED" layoutX="187.0" layoutY="340.0" onAction="#loginButtonPressed" ripplerFill="#f8eded" style="-fx-background-color: #2196F3;" text="Login" />
-      <JFXButton buttonType="RAISED" layoutX="280.0" layoutY="340.0" onAction="#SingUpButtonPressed" style="-fx-background-color: #074C83;" text="Sign up" textFill="#f2dfdf" />
       <JFXPasswordField fx:id="PasswordId" layoutX="157.0" layoutY="250.0" promptText="Password" />
-      <Label fx:id="StatusId1" layoutX="114.0" layoutY="311.0" prefHeight="31.0" prefWidth="222.0" textFill="#d31818" />
+      <Label fx:id="CreateNewAccountLabel" layoutX="152.0" layoutY="378.0" onMouseClicked="#CreateNewAccountPressed" stylesheets="@buttonImage.css" text="Or, create a new account" />
     </children>
 </AnchorPane>

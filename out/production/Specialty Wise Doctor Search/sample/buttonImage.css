@@ -1,6 +1,40 @@
 #myButton {
-    -fx-background-image: url("back.png");
-    -fx-background-size: 26 35;
+    -fx-background-image: url("backarrow.png");
+    -fx-background-size: 35 30;
     -fx-background-repeat: no-repeat;
     -fx-background-position:left;
+    -fx-background-color: #0963AB;
+}
+
+#CreateNewAccountLabel:hover{
+    -fx-text-fill: deepskyblue;
+}
+
+/*#CreateNewAccountLabel{*/
+/*    -fx-text-fill: blue;*/
+/*}*/
+
+#CreateNewAccountLabel{
+    -fx-text-fill: blue;
+}
+
+.label{
+    -fx-text-fill: white;
+}
+
+.tool-bar{
+    -fx-background-color:  #0963AB;
+}
+
+#signupToolbar{
+
+    -fx-border-color: pink;
+    -fx-padding: 10 10;
+
+
+    border: 2px solid orange;
+    padding: 10px 40px;
+    background: black;
+    width: 300px;
+    border-radius: 10px;
 }

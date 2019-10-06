@@ -17,12 +17,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class LogInWindowController {
 
     @FXML
     private Label StatusId;
+
+    @FXML
+    private Label CreateNewAccountLabel;
+
 
     @FXML
     private JFXPasswordField PasswordId;
@@ -63,8 +68,9 @@ public class LogInWindowController {
         }
     }
     
+
     @FXML
-    void SingUpButtonPressed(ActionEvent event) throws IOException {
+    void CreateNewAccountPressed(MouseEvent event) throws IOException {
         Parent SignUpWindowParent = FXMLLoader.load(getClass().getResource("SignupWindow.fxml"));
         Scene SignUpWindowScene = new Scene(SignUpWindowParent);
         Stage SignUpWindowStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -72,5 +78,7 @@ public class LogInWindowController {
         SignUpWindowStage.setScene(SignUpWindowScene);
         SignUpWindowStage.show();
     }
+
+
 
 }

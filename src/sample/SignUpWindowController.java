@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToolBar;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import org.json.simple.JSONArray;
@@ -29,6 +30,9 @@ public class SignUpWindowController {
 
     @FXML
     private JFXTextField UsernameId;
+
+    @FXML
+    private ToolBar signupTollbar;
 
     @FXML
     private JFXPasswordField PasswordId;
