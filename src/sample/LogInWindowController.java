@@ -47,6 +47,9 @@ public class LogInWindowController {
             String Username = me.next();
             String Password = me.next();
             System.out.println(Username + "and" + Password);
+
+            
+
  //           String[] UserNameAndPasswordArray = UsernameAndPassword.split(" ");
 //            System.out.println(UserNameAndPasswordArray[0] + UserNameAndPasswordArray[1]);
             
