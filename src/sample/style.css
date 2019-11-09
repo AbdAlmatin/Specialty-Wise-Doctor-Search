@@ -18,8 +18,10 @@
     -fx-text-fill: blue;
 }
 
-.label{
-    -fx-text-fill: white;
+#createNewAccount{
+    -fx-background-color: white;
+    -fx-text-fill: skyblue;
+    -fx-border-color: none;
 }
 
 .tool-bar{
@@ -37,4 +39,27 @@
     background: black;
     width: 300px;
     border-radius: 10px;
+}
+#adminLabel{
+    -fx-background-color: #0963AB;
+}
+
+#labelDash{
+    -fx-background-color: #006666;
+    -fx-border-color: black;
+    -fx-text-fill: white;
+}
+#labelDash:hover{
+    -fx-background-color: black;
+}
+#labelDash:focused{
+    -fx-background-color: white;
+}
+
+#rightBar{
+    -fx-background-color: #0033cc;
+}
+
+#vBox{
+    -fx-border-color: #ff6699;
 }

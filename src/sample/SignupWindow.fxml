@@ -25,9 +25,9 @@
             <JFXTextField fx:id="EmailId" focusColor="#c5c9d7" layoutX="124.0" layoutY="296.0" prefHeight="31.0" prefWidth="221.0" promptText="(e.g: abdullah@gmail.com)" style="-fx-background-color: #EFF7FE;" unFocusColor="BLACK" />
             <JFXButton buttonType="RAISED" layoutX="190.0" layoutY="360.0" onAction="#SingupButtonPressed" style="-fx-background-color: #F8F4FC;" text="Sign up" />
             <JFXPasswordField fx:id="PasswordId" focusColor="#d0d8f2" layoutX="124.0" layoutY="196.0" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #EFF7FE;" />
-            <ToolBar fx:id="signupToolbar" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@buttonImage.css">
+            <ToolBar fx:id="signupToolbar" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@style.css">
               <items>
-                <Button fx:id="myButton" mnemonicParsing="false" onAction="#BackButtonPressed" stylesheets="@buttonImage.css" />
+                <Button fx:id="myButton" mnemonicParsing="false" onAction="#BackButtonPressed" stylesheets="@style.css" />
                   <Label text="Sign Up">
                      <padding>
                         <Insets left="15.0" right="15.0" />

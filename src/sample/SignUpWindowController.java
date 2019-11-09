@@ -103,10 +103,9 @@ public class SignUpWindowController {
         stage.show();
     }
 
+    @FXML
+    void AdminLoginClicked(ActionEvent event) {
 
-
-
-    
-    
+    }
 
 }

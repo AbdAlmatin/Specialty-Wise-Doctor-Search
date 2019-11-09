@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,6 +30,7 @@
       <JFXTextField fx:id="UsernameId" layoutX="157.0" layoutY="189.0" promptText="Username" />
       <JFXButton buttonType="RAISED" layoutX="187.0" layoutY="340.0" onAction="#loginButtonPressed" ripplerFill="#f8eded" style="-fx-background-color: #2196F3;" text="Login" />
       <JFXPasswordField fx:id="PasswordId" layoutX="157.0" layoutY="250.0" promptText="Password" />
-      <Label fx:id="CreateNewAccountLabel" layoutX="152.0" layoutY="378.0" onMouseClicked="#CreateNewAccountPressed" stylesheets="@buttonImage.css" text="Or, create a new account" />
+      <Label id="createNewAccount" fx:id="CreateNewAccountLabel" layoutX="152.0" layoutY="378.0" onMouseClicked="#CreateNewAccountPressed" stylesheets="@style.css" text="Or, create a new account" />
+      <ToggleButton layoutX="380.0" layoutY="14.0" mnemonicParsing="false" onAction="#AdminLoginClicked" text="Admin Login" />
     </children>
 </AnchorPane>
