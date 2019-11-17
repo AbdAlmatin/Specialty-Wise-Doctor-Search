@@ -113,8 +113,8 @@ public class InsertDoctorDataController implements Initializable {
         preparedStatement4.setString(1, regNum.getText());
 
         // query for table work
-        String query5 = "INSERT INTO work(doctor_reg_num, hospital_reg_num) values (?, ?)";
-        PreparedStatement preparedStatement5 = con.prepareStatement(query4);
+        String query5 = "INSERT INTO work(doctor_reg_num, hospital_reg_num) values(?, ?)";
+        PreparedStatement preparedStatement5 = con.prepareStatement(query5);
         preparedStatement5.setString(1, regNum.getText());
 
         // query for works for any hospital
@@ -147,6 +147,7 @@ public class InsertDoctorDataController implements Initializable {
         if (hospital.getText() != null){
             runFifth = true;
             preparedStatement5.setString(2, String.valueOf(loadDatabase.hospitals_reg_num.get(hospital.getText())));
+            System.out.println("runfift is true");
         }
 
 
@@ -200,10 +201,9 @@ public class InsertDoctorDataController implements Initializable {
         Degrees1.setValue("MBBS");
         Degrees1.getItems().addAll("MBBS","Bachelor of Medicine, Bachelor of Surgery", "Bachelor of Surgery",  "Doctor of Medicine",  "Doctor of Osteopathic Medicine");
         Degrees2.getItems().addAll("FCPS", "MD", "MS","M.Phil", "M.MED");
-        District1.setValue("Chittagong");
         District1.getItems().addAll(loadDatabase.districts);
-        District2.setValue("Chittagong");
         District2.getItems().addAll(loadDatabase.districts);
+        hospital.setText(null);
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
