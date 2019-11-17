@@ -114,7 +114,7 @@ public class InsertDoctorDataController implements Initializable {
 
         // query for table work
         String query5 = "INSERT INTO work(doctor_reg_num, hospital_reg_num) values(?, ?)";
-        PreparedStatement preparedStatement5 = con.prepareStatement(query5);
+        PreparedStatement preparedStatement5 = con.prepareStatement(query5                                                                                                                                                                                                                                                                              );
         preparedStatement5.setString(1, regNum.getText());
 
         // query for works for any hospital
@@ -175,10 +175,10 @@ public class InsertDoctorDataController implements Initializable {
 
         if( !isFailed ){
             Toolkit.getDefaultToolkit().beep();
-            Alert ErrorSql = new Alert(AlertType.INFORMATION);
-            ErrorSql.setContentText("Data for '" + firstName.getText() + " " + lastName.getText() + "' Successfully inserted");
-            ErrorSql.setHeaderText("Successfull");
-            ErrorSql.show();
+            Alert successful = new Alert(AlertType.INFORMATION);
+            successful.setContentText("Data for '" + firstName.getText() + " " + lastName.getText() + "' Successfully inserted");
+            successful.setHeaderText("Successfull");
+            successful.show();
 
             // Clear the textfields
             firstName.clear();
