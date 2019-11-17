@@ -18,15 +18,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-
-import javax.jws.soap.SOAPBinding;
 
 public class LogInWindowController {
 
@@ -42,14 +40,20 @@ public class LogInWindowController {
 
     @FXML
     private JFXTextField UsernameId;
-    
+
     private boolean LoggedIn = false;
-    private Scanner me; 
-    
+    private Scanner me;
+
+//    private String usr = UsernameId.getText();
+
+//    public String getUsername(){
+//        return usr;
+//    }
+
     @FXML
     void loginButtonPressed(ActionEvent event) throws IOException, ParseException {
-        String Username = UsernameId.getText().toString();
-        String Password = PasswordId.getText().toString();
+        String Username = UsernameId.getText();
+        String Password = PasswordId.getText();
         Object obj = (new JSONParser()).parse(new FileReader("userinformation.json"));
         JSONObject JObject = (JSONObject) obj;
         JSONArray Found= (JSONArray) JObject.get(Username);
@@ -61,6 +65,9 @@ public class LogInWindowController {
                 window.setTitle("Specialty Wise Doctor Search");
                 window.setScene(n1);
                 window.show();
+            }
+            else{
+                StatusId.setText("Wring Username or password");
             }
         }
     }
@@ -84,6 +91,11 @@ public class LogInWindowController {
         SignUpWindowStage.setTitle("Admin Login");
         SignUpWindowStage.setScene(SignUpWindowScene);
         SignUpWindowStage.show();
+    }
+
+    @FXML
+    void KeyPressed(KeyEvent event) {
+        StatusId.setText("");
     }
 
 }

@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
-   <children>
-      <MenuBar prefHeight="32.0" prefWidth="171.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <TextField fx:id="DoctorNameId" layoutX="155.0" layoutY="53.0" promptText="Enter doctor's name" />
-      <Text layoutX="6.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by name" />
-      <Text fontSmoothingType="LCD" layoutX="213.0" layoutY="138.0" stroke="#5b4545" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: Purple;" text="Search by specialty" underline="true" wrappingWidth="145.23828887939453" />
-      <JFXComboBox fx:id="ComboVoxId" layoutX="53.0" layoutY="165.0" promptText="Gender" />
-      <Button layoutX="336.0" layoutY="51.0" mnemonicParsing="false" onAction="#GoForSearchByName" text="Search" />
-      <TextField layoutX="240.0" layoutY="165.0" prefHeight="29.0" prefWidth="343.0" promptText="in lower case (e.g: skin and sex, heart, medicine)" />
-      <Text layoutX="173.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specialty:" />
-      <Text layoutX="9.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place you currently live in:            (This sections helps us to suggest the doctors near to your location)" />
-      <TextField fx:id="DoctorNameId1" layoutX="40.0" layoutY="260.0" prefHeight="32.0" prefWidth="57.0" promptText="Enter doctor's name" text="District" />
-      <TextField fx:id="DoctorNameId11" layoutX="127.0" layoutY="260.0" prefHeight="32.0" prefWidth="105.0" promptText="Enter doctor's name" text="Thana/Upazila" />
-      <Text fill="#bc6565" layoutX="273.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: Please fill up these two fills with correct speelling." />
-      <Button layoutX="245.0" layoutY="326.0" mnemonicParsing="false" onAction="#GoForSearchByName" text="Search" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
+    <children>
+        <VBox id="vBox" layoutX="70.0" layoutY="90.0" prefHeight="400.0" prefWidth="201.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label id="userlabel" fx:id="UsernameLabel" prefHeight="78.0" prefWidth="200.0" stylesheets="@userpanelStyle.css" textFill="#b56a6a">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Label id="labelusrpanel" fx:id="adminLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#searchByDoctorClicked" prefHeight="38.0" prefWidth="200.0" styleClass="tool-bar" stylesheets="@userpanelStyle.css" text="Search By Doctor" textFill="#b56a6a">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Label>
+                <Label id="labelusrpanel" fx:id="adminLabel12" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="101.0" onMouseClicked="#searchBySpecialtyClicked" prefHeight="38.0" prefWidth="200.0" styleClass="tool-bar" stylesheets="@userpanelStyle.css" text="Search By Specialty" textFill="#b56a6a">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label id="labelusrpanel" fx:id="adminLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="100.0" onMouseClicked="#updateProfileClicked" prefHeight="38.0" prefWidth="200.0" stylesheets="@userpanelStyle.css" text="Update Profile" textFill="#b56a6a">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </Label>
+                <Label id="logoutlabel" fx:id="adminLabel111" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="138.0" onMouseClicked="#logOutClicked" prefHeight="38.0" prefWidth="200.0" stylesheets="@userpanelStyle.css" text="Logout" textFill="#b56a6a">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="155.0" />
+               </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <AnchorPane fx:id="RightSideBar" layoutX="220.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
 </AnchorPane>

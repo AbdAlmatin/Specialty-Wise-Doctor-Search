@@ -1,3 +1,7 @@
+#statusID{
+    -fx-text-fill: red;
+}
+
 #myButton {
     -fx-background-image: url("backarrow.png");
     -fx-background-size: 35 30;
@@ -26,6 +30,18 @@
 
 .tool-bar{
     -fx-background-color:  #0963AB;
+}
+
+.button{
+    -fx-background-color: #0963AB;
+    -fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-font-family: 'Courier New';
+}
+
+.text-field{
+    -fx-prompt-text-fill: #0963AB;
+    -fx-font-family: 'sans-serif';
 }
 
 #signupToolbar{

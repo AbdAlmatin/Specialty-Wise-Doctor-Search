@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="409.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInWindowController">
     <children>
-      <Label fx:id="StatusId" layoutX="104.0" layoutY="301.0" prefHeight="31.0" prefWidth="222.0" textFill="#d31818" />
+      <Label id="statusID" fx:id="StatusId" layoutX="104.0" layoutY="301.0" prefHeight="31.0" prefWidth="222.0" stylesheets="@style.css" textFill="#d31818" />
       <ImageView fitHeight="31.0" fitWidth="45.0" layoutX="109.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@passwordIcon.png" />
@@ -29,7 +29,7 @@
       </ImageView>
       <JFXTextField fx:id="UsernameId" layoutX="157.0" layoutY="189.0" promptText="Username" />
       <JFXButton buttonType="RAISED" layoutX="187.0" layoutY="340.0" onAction="#loginButtonPressed" ripplerFill="#f8eded" style="-fx-background-color: #2196F3;" text="Login" />
-      <JFXPasswordField fx:id="PasswordId" layoutX="157.0" layoutY="250.0" promptText="Password" />
+      <JFXPasswordField fx:id="PasswordId" layoutX="157.0" layoutY="250.0" onKeyPressed="#KeyPressed" promptText="Password" />
       <Label id="createNewAccount" fx:id="CreateNewAccountLabel" layoutX="152.0" layoutY="378.0" onMouseClicked="#CreateNewAccountPressed" stylesheets="@style.css" text="Or, create a new account" />
       <ToggleButton layoutX="380.0" layoutY="14.0" mnemonicParsing="false" onAction="#AdminLoginClicked" text="Admin Login" />
     </children>

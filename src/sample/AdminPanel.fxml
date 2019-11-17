@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPanelController">
+<AnchorPane prefHeight="472.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPanelController">
    <children>
-      <VBox id="vBox" layoutX="70.0" layoutY="90.0" prefHeight="400.0" prefWidth="201.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+      <VBox id="vBox" layoutX="70.0" layoutY="90.0" prefHeight="472.0" prefWidth="204.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="455.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label id="adminLabel" fx:id="adminLabel" prefHeight="78.0" prefWidth="200.0" stylesheets="@style.css" text="Administrator" textFill="#b56a6a">
                <font>
@@ -40,6 +40,6 @@
             </Label>
          </children>
       </VBox>
-      <AnchorPane fx:id="RightSideBar" layoutX="220.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="RightSideBar" layoutX="202.0" layoutY="31.0" prefHeight="470.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

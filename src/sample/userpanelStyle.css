@@ -1,0 +1,29 @@
+#userlabel{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#labelusrpanel{
+    -fx-background-color: #006666;
+    -fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-font-family:  sans-serif;
+}
+#labelusrpanel:hover{
+    -fx-background-color: black;
+}
+#logoutlabel:hover{
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+#labelusrpanel:focused{
+    -fx-background-color: white;
+}
+
+#rightBar{
+    -fx-background-color: #0033cc;
+}
+
+#vBox{
+    -fx-border-color: #ff6699;
+}

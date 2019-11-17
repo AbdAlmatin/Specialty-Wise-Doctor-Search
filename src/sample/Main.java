@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.sql.*;
+import java.util.List;
+
 public class Main extends Application {
 
     @Override
@@ -17,7 +20,11 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        loadDatabase.LoadDatabase();
+
         launch(args);
     }
+
 }

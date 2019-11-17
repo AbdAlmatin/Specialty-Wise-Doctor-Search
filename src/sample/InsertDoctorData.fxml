@@ -1,27 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertDoctorDataController">
+<AnchorPane fx:id="Container" prefHeight="470.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertDoctorDataController">
     <children>
         <JFXTextField fx:id="regNum" layoutX="123.0" layoutY="28.0" promptText="Registration Number" />
-        <JFXTextField fx:id="firstName" layoutX="123.0" layoutY="70.0" promptText="First Name" />
-        <JFXTextField fx:id="lastName" layoutX="123.0" layoutY="113.0" promptText="Last Name" />
-        <JFXTextField fx:id="fieldOfSpecialty" layoutX="123.0" layoutY="163.0" promptText="Field Of Specialty" />
-        <JFXTextField fx:id="personalCham1" layoutX="123.0" layoutY="288.0" prefHeight="26.0" prefWidth="224.0" promptText="Personal Chamber Address (1)" />
-        <JFXTextField fx:id="personalCham2" layoutX="124.0" layoutY="314.0" prefHeight="26.0" prefWidth="224.0" promptText="Personal Chamber Address (2)" />
+        <JFXTextField fx:id="firstName" layoutX="123.0" layoutY="62.0" promptText="First Name" />
+        <JFXTextField fx:id="lastName" layoutX="124.0" layoutY="97.0" promptText="Last Name" />
+        <JFXTextField fx:id="fieldOfSpecialty" layoutX="123.0" layoutY="133.0" promptText="Field Of Specialty" />
         <Label layoutX="103.0" layoutY="2.0" text="Insert Doctors Data" textFill="#cd9e9e">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button layoutX="180.0" layoutY="354.0" mnemonicParsing="false" onAction="#InsertClicked" text="Insert" />
-      <ChoiceBox fx:id="Degrees1" layoutX="126.0" layoutY="206.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="Degrees2" layoutX="126.0" layoutY="254.0" prefWidth="150.0" />
+        <Button layoutX="174.0" layoutY="424.0" mnemonicParsing="false" onAction="#InsertClicked" text="Insert" />
+      <ChoiceBox fx:id="Degrees1" layoutX="16.0" layoutY="174.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="Degrees2" layoutX="203.0" layoutY="174.0" prefWidth="150.0" />
+      <Label layoutX="1.0" layoutY="215.0" text="Personal Chamber Address:" AnchorPane.leftAnchor="1.0" />
+      <HBox layoutY="231.0" prefHeight="46.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="231.0">
+         <children>
+            <ChoiceBox fx:id="District1" prefHeight="26.0" prefWidth="74.0">
+               <HBox.margin>
+                  <Insets left="12.0" right="30.0" top="12.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <TextField fx:id="th1" promptText="Thana">
+               <HBox.margin>
+                  <Insets right="30.0" top="12.0" />
+               </HBox.margin>
+            </TextField>
+              <JFXTextField fx:id="personalCham1" prefHeight="26.0" prefWidth="122.0" promptText="Location">
+               <HBox.margin>
+                  <Insets top="12.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox layoutY="283.0" prefHeight="46.0" prefWidth="400.0">
+         <children>
+            <ChoiceBox fx:id="District2" prefHeight="26.0" prefWidth="74.0">
+               <HBox.margin>
+                  <Insets left="13.0" right="30.0" top="12.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <TextField fx:id="th2" promptText="Thana">
+               <HBox.margin>
+                  <Insets right="30.0" top="12.0" />
+               </HBox.margin>
+            </TextField>
+            <JFXTextField fx:id="personalCham2" prefHeight="26.0" prefWidth="123.0" promptText="Location">
+               <HBox.margin>
+                  <Insets top="12.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <Label layoutX="17.0" layoutY="349.0" text="Works in any Hospital?" AnchorPane.topAnchor="349.0" />
+      <TextField fx:id="hospital" layoutX="162.0" layoutY="345.0" prefHeight="26.0" prefWidth="275.0" promptText="Hospital Name" AnchorPane.topAnchor="345.0" />
     </children>
 </AnchorPane>
